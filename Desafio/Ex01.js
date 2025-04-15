@@ -1,11 +1,18 @@
-var prompt = require('prompt-sync')();
-let Nome = prompt("Qual seu Nome: ");
-const Cadastrado = ["Ana", "Carlos","Bianca"];
+// Crie um sistema que permita cadastrar nomes. Antes de adicionar,
+// verifique se o nome já está na lista (ignore maiúsculas/minúsculas). Se
+// não estiver, adicione o usuário.
 
-        do {
-            
-            console.log("Repita o seu Nome: ")
+var prompt = require(`prompt-sync`)();
 
-        } while (Nome == Cadastrado);
 
-console.log("Passe liberado com sucesso ;)");
+
+let Lista = ["ana","bia", "Joao"]
+let Nomes = prompt("Digite seu nome: ").toLowerCase();
+
+if (Lista.includes(Nomes)) {
+    console.log("Nome ja cadastrado");
+} else {
+    Lista.push(Nomes);
+    console.log("Nome adicionado ao sistema.");
+    
+}
